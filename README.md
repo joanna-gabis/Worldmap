@@ -11,6 +11,6 @@ Screenshots:
 
 ![main page](/screenshots/mainpage.png?raw=true "Main page")
 ![country info](/screenshots/countryinfo.png?raw=true "Country info")
-![wishlist](/screenshots/wishlist?raw=true "Wishlist")
+![wishlist](/screenshots/wishlist.png?raw=true "Wishlist")
 ![quiz](/screenshots/quiz.png?raw=true "Quiz")
 
