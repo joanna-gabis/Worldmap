@@ -1,0 +1,443 @@
+$primary-color: #272C2F;
+$secondary-color: #ECEFF1;
+$tertiary-color: #5297bf;
+$green: #58b54d;
+$red: #ed6565;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.app {
+  text-align: center;
+  width: 100%;
+}
+
+/* TABS STYLES */
+.tabs {
+  background-color: $primary-color;
+  width: 100vw;
+  height: 10vh;
+  a {
+    color: #FFF;
+    &:hover {
+      color: #b5e0dc;
+    }
+  }
+  .tab {
+    width: 20%;
+    line-height: 10vh;
+    display: inline-block;
+  }
+  .home {
+    font-size: 1rem;
+    margin-right: 5px;
+  }
+  .hamburger-menu {
+    display: none;
+    margin: 0;
+    padding: 5px;
+    .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #FFF;
+    margin: 6px 0;
+    }
+  }
+
+  @media only screen and (max-width: 715px) {
+    height: auto;
+    .hamburger-menu {
+      display: block;
+      padding: 10px 0 10px 30px;
+      height: 10vh;
+    }
+
+    .display_block {
+      display: block;
+    }
+    .display_none {
+      display: none;
+    }
+
+    .tab {
+      width: 100%;
+      line-height: 5vh;
+    }
+  }
+}
+
+/* HEADER STYLES */
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('./coverphoto.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 85vh;
+  color: white;
+
+  .app-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+  }
+
+  .app-title {
+    font-size: 7rem;
+    display: inline-block;
+    z-index: 1;
+  }
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.container-fluid {
+  width: 100vw;
+}
+
+/* MAP STYLES */
+
+.map {
+  background-color: $primary-color;
+
+  .button-zoom {
+    display: inline-block;
+    width: 50%;
+    height: 3rem;
+    line-height: 3rem;
+    color: black;
+    font-size: 2rem;
+    background-color: #FFF;
+    border: 1px solid $primary-color;
+  }
+}
+
+/* SEARCHBAR STYLES */
+
+.searchbar {
+  margin: 10px;
+
+  input {
+    width: 30%;
+    height: 30px;
+    border: 1px solid black;
+    &::placeholder {
+      text-align: center;
+    }
+  }
+  button {
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    background-color: white;
+    border: 1px solid black;
+    border-left: none;
+    margin-right: 5vw;
+  }
+
+  .select {
+    width: 33%;
+    height: 30px;
+    border: 1px solid black;
+    margin-left: 5vw;
+    background-color: white;
+
+    &:focus {
+      background-color: white;
+    }
+  }
+}
+
+/* TABLE STYLES */
+
+.countries-table {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .countries-table-header {
+    background-color: $primary-color;
+    color: #FFF;
+    width: 50%;
+  }
+  tbody tr {
+    &:hover {
+      cursor: pointer;
+      color: #000;
+    }
+    &:nth-child(even) {
+      background-color: $secondary-color;
+    }
+  }
+}
+
+/* MODAL STYLES */
+
+.modal {
+  padding: 20px;
+  border-radius: none;
+  text-align: center;
+  background-color: #FFF;
+  color: $primary-color;
+
+  .countryName {
+    background-color: $primary-color;
+    color: white;
+    font-size: 2rem;
+  }
+
+  .modal-table {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .modal-left {
+      text-align: left;
+      flex: 1;
+      padding: 5px;
+    }
+    .modal-right {
+      text-align: center;
+      flex: 1;
+      padding: 5px;
+      .flag {
+        width: 100%;
+        margin-bottom: 20px;
+        -webkit-box-shadow: 7px -7px 10px -4px rgba(39,44,47,0.56);
+        -moz-box-shadow: 7px -7px 10px -4px rgba(39,44,47,0.56);
+        box-shadow: 7px -7px 10px -4px rgba(39,44,47,0.56);
+      }
+      .icon {
+        margin: 20px;
+      }
+      .wishlist-added {
+        color: $red;
+      }
+      .visited-added {
+        color: $green;
+      }
+    }
+  }
+}
+
+/* VISTED COUNTRIES AND WISHLIST STYLES */
+
+.visited-countries-background {
+  background:
+  linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ),
+  url('visitedpic.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 85vh;
+}
+.wishlist-background {
+  background:
+  linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ),
+  url('wishlistpic.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 85vh;
+}
+
+.visited-countries, .wishlist {
+  text-align: left;
+  padding: 50px;
+  color: #FFF;
+  font-size: 1.5rem;
+  line-height: 2rem;
+
+  .wishlist-content, .visited-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+
+    & > div {
+      flex-grow: 1;
+      min-width: 25%;
+      margin: 30px;
+    }
+  }
+
+  .visited-countries-remove {
+    margin-left: 10px;
+    color: $red;
+    &:hover::after {
+      background: #333;
+      background: rgba(0,0,0,.8);
+      color: #FFF;
+      font-size: .8rem;
+      display: inline-block;
+      position: absolute;
+      margin: 0 0 2px 5px;
+      border-radius: 5px;
+      padding: 5px 15px;
+      z-index: 98;
+      content: 'remove from visited countries list';
+    }
+  }
+
+  .wishlist-remove {
+    margin-left: 10px;
+    color: $red;
+    &:hover::after {
+      background: #333;
+      background: rgba(0,0,0,.8);
+      color: #FFF;
+      font-size: .8rem;
+      display: inline-block;
+      position: absolute;
+      margin: 0 0 2px 5px;
+      border-radius: 5px;
+      padding: 5px 15px;
+      z-index: 98;
+      content: 'remove from wishlist';
+    }
+  }
+  .wishlist-mark {
+    margin-left: 10px;
+    color: $green;
+    &:hover::after {
+      background: #333;
+      background: rgba(0,0,0,.8);
+      color: #FFF;
+      font-size: .8rem;
+      display: inline-block;
+      position: absolute;
+      margin: 0 0 2px 5px;
+      border-radius: 5px;
+      padding: 5px 15px;
+      z-index: 98;
+      content: 'move to visited';
+    }
+  }
+
+  .visited-summary, .wishlist-summary {
+    text-align: center;
+    margin: 20px 0 20px 0;
+    font-weight: 900;
+  }
+}
+
+/* QUIZ STYLES */
+
+.quiz {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+  linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ),
+  url('quizpic.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 85vh;
+  color: #FFF;
+  .quiz-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .capitalInput {
+    height: 37px;
+    border-radius: 3px;
+    margin: 15px 5px 10px 5px;
+    padding: 5px;
+    display: inline-block;
+    width: 30vw;
+    @media only screen and (max-width: 600px) {
+      width: 40vw;
+    }
+  }
+  .checkAnswer {
+    background-color: $tertiary-color;
+    color: #000;
+    &:hover {
+      background-color: darken($tertiary-color, 10%)
+    }
+  }
+  .getCountry {
+    background-color: $primary-color;
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+  .checkAnswer, .getCountry {
+    margin: 10px;
+    padding: 10px;
+    width: 30vw;
+    display: inline-block;
+    border-radius: 3px;
+
+    @media only screen and (max-width: 600px) {
+      width: 40vw;
+    }
+  }
+  .checkAnswer-disabled {
+    background-color: grey ;
+    color: #000;
+    margin: 10px;
+    padding: 10px;
+    width: 30vw;
+    display: inline-block;
+    border-radius: 3px;
+
+    @media only screen and (max-width: 600px) {
+      width: 40vw;
+    }
+  }
+  .score-reset {
+    background-color: #FFF;
+    color: $primary-color;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    &:hover {
+      background-color: darken(#FFF, 10%);
+    }
+  }
+  .output {
+    height: 1.5rem;
+  }
+  .score {
+    margin-top: 20px;
+    font-weight: 700;
+  }
+}
+
+/* FOOTER STYLES */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $primary-color;
+  height: 5vh;
+  color: white;
+}

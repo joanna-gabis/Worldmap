@@ -1,0 +1,29 @@
+{
+  "visited": [
+    {
+      "region": "Oceania",
+      "name": "Australia",
+      "alpha3Code": "AUS",
+      "id": 5
+    },
+    {
+      "region": "Africa",
+      "name": "Angola",
+      "alpha3Code": "AGO",
+      "id": 6
+    },
+    {
+      "region": "Europe",
+      "name": "Poland",
+      "alpha3Code": "POL",
+      "id": 7
+    },
+    {
+      "region": "Americas",
+      "name": "Brazil",
+      "alpha3Code": "BRA",
+      "id": 8
+    }
+  ],
+  "wishlist": []
+}
