@@ -25,5 +25,30 @@
       "id": 8
     }
   ],
-  "wishlist": []
+  "wishlist": [
+    {
+      "region": "Africa",
+      "name": "Algeria",
+      "alpha3Code": "DZA",
+      "id": 1
+    },
+    {
+      "region": "Americas",
+      "name": "Argentina",
+      "alpha3Code": "ARG",
+      "id": 2
+    },
+    {
+      "region": "Oceania",
+      "name": "New Zealand",
+      "alpha3Code": "NZL",
+      "id": 3
+    },
+    {
+      "region": "Asia",
+      "name": "Mongolia",
+      "alpha3Code": "MNG",
+      "id": 4
+    }
+  ]
 }
